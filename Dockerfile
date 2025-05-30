@@ -1,12 +1,12 @@
 FROM node:20-alpine AS development-dependencies-env
 COPY . /app
 WORKDIR /app
-RUN npm run ci
+RUN npm ci
 
 FROM node:20-alpine AS production-dependencies-env
 COPY ./package.json package-lock.json /app/
 WORKDIR /app
-RUN npm run ci --omit=dev
+RUN npm ci --omit=dev
 
 FROM node:20-alpine AS build-env
 COPY . /app/
