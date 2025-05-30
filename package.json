@@ -5,8 +5,8 @@
   "scripts": {
     "build": "rsbuild build",
     "dev": "rsbuild dev",
-    "start": "react-router-serve ./build/server/index.js",
-    "typecheck": "react-router typegen && tsc"
+    "start": "rsbuild ./build/server/index.js",
+    "typecheck": "rsbuild typegen && tsc"
   },
   "dependencies": {
     "@react-router/node": "7.1.3",
